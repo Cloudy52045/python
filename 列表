@@ -1,0 +1,65 @@
+movies = ["The Holy Grail","The Life of Brian","The Meaning of Life"]
+print(movies[1]) ''' #显示列表的第一个
+
+cast = ["Cliess",'Palin','Jone','Idle']
+print(cast)
+cast.append("Gilliam")  #在列表末尾增加一个数据项
+print(cast)
+cast.extend(["Gilliam","Chapman"]) #在列表末尾增加一个数据项的集合
+print(cast)
+cast.remove("Chapman")  #删除指定的一个数据项
+print(cast)
+cast.insert(0,"Chapman") #添加一个数据项到指定位置
+print(cast)#列表的增删改查
+
+movies = ["The Holy Grail","The Life of Brian","The Meaning of Life"]
+movies.append("1983")
+movies.insert(1,"1975")
+movies.insert(3,"1979")
+print(movies)'''
+
+fav_movies = ["The Holy Grail","The Life of Brian"]
+print(fav_movies[0])
+print(fav_movies[1])'''
+
+fav_movies = ["The Holy Grail","The Life of Brian"]
+for each_flick in fav_movies:
+    print(each_flick)'''
+#目标标识符 类似于代码中的任何其他名。迭代处理列表时，相应的会把列表的各个数据值分别赋给目标标识符。
+
+fav_movies = ["The Holy Grail","The Life of Brian"]
+count = 0    #计数标识符
+while count < len(fav_movies):
+    print(fav_movies[count])
+    count = count + 1 
+#使用while循环同for循环效果一致
+
+movies = ["The Holy Grail",1975,"Terry Jones & Terry Gillliam",91,["Graham Chapman",["Michael Palin","John Cleese","Terry Gilliam","Eric Idle","Terry Jones"]]]
+print(movies[4][1][3])   #显示三层嵌套中的一个数据项
+for each_item in movies:
+    print(each_item)     #for循环显示外嵌套的数据项，不显示内部嵌套内容
+
+names = ["Michael","Terry"]
+isinstance(names,list)  #询问names是不是一个列表，list表示python的一个类型
+
+movies = ["The Holy Grail",1975,"Terry Jones & Terry Gillliam",91,["Graham Chapman",["Michael Palin","John Cleese","Terry Gilliam","Eric Idle","Terry Jones"]]]
+for each_item in movies:   #循环显示列表的数据
+    if isinstance (each_item,list):           #检查当前列表项是不是一个列表
+        for nested_item in each_item:        #如果这是一个列表，使用一个“for”循环处理这个嵌套列表
+            if isinstance (nested_item,list):   #检查当前列表项是不是一个列表
+                for deeper_item in each_item:   #如果这是一个列表，使用一个“for”循环处理这个嵌套列表
+                    print(deeper_item)
+                else:
+                    print(nested_item)
+    else:                                      #如果外围列表的当前项不是一个列表，则在屏幕上显示着一项
+        print(each_item)
+
+def print_lol(the_list):
+    for each_iem in the_list:
+        if isinstance(each_iem,list):     #定义一个函数
+            print_lol(each_iem)
+        else:
+            print(each_iem)
+
+movies = ["The Holy Grail",1975,"Terry Jones & Terry Gillliam",91,["Graham Chapman",["Michael Palin","John Cleese","Terry Gilliam","Eric Idle","Terry Jones"]]]
+print_lol(movies)   #调用函数
