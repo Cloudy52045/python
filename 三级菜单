@@ -1,0 +1,86 @@
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*- 
+
+date = {
+    '北京':{
+        "昌平":{
+            "沙河":{"oldboy","test"},
+            "天通苑":{"链家地产","我爱我家"},
+        },
+        "朝阳":{
+            "望京":{"奔驰","陌陌"},
+            "国贸":{"CICC","HP"},
+            "东直门":{"Advent","飞信"},
+                },
+        "海淀":{
+            "望京":{"奔驰","陌陌"},
+            "国贸":{"CICC","HP"},
+            "东直门":{"Advent","飞信"},
+        },
+    },
+    '山东':{
+        "德州":{
+            "望京":{"奔驰","陌陌"},
+            "国贸":{"CICC","HP"},
+            "东直门":{"Advent","飞信"},
+        },
+        "青岛":{
+            "望京":{"奔驰","陌陌"},
+            "国贸":{"CICC","HP"},
+            "东直门":{"Advent","飞信"},
+        },
+        "济南":{
+            "望京":{"奔驰","陌陌"},
+            "国贸":{"CICC","HP"},
+            "东直门":{"Advent","飞信"},
+        },
+    },
+    '广东':{
+        "东莞":{
+            "望京":{"奔驰","陌陌"},
+            "国贸":{"CICC","HP"},
+            "东直门":{"Advent","飞信"},
+        },
+        "常熟":{
+            "望京":{"奔驰","陌陌"},
+            "国贸":{"CICC","HP"},
+            "东直门":{"Advent","飞信"},
+        },
+        "佛山":{
+            "望京":{"奔驰","陌陌"},
+            "国贸":{"CICC","HP"},
+            "东直门":{"Advent","飞信"},
+        },
+    },
+}
+exit_flag = False
+
+while not False:
+    for i in date:
+        print(i)
+    choine = input("你要选着哪个省>>>:")
+    if choine in date:
+        while not False:
+            for i2 in date[choine]:
+                print("\t",i2)
+            choine2 = input("你要选择哪个市>>>:")
+            if choine2 in date[choine]:
+                while not False:
+                    for i3 in date[choine][choine2]:
+                        print("\t\t",i3)
+                    choine3 = input("你选择哪家公司>>>:")
+                    if choine3 in date[choine][choine2]:
+                        for i4 in date[choine][choine2][choine3]:
+                            print("\t\t\t",i4)
+                        choine4 = input("按 q 退出")
+                        if choine4 == "q":
+                            pass
+                        elif choine4 == "q":
+                            exit_flag = True
+                    if choine3 == "q":
+                        break
+            if choine2 == "q":
+                break
+
+
+
