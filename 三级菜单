@@ -55,32 +55,39 @@ date = {
 }
 exit_flag = False
 
-while not False:
+while not exit_flag:
     for i in date:
         print(i)
     choine = input("你要选着哪个省>>>:")
     if choine in date:
-        while not False:
+        while not exit_flag:
             for i2 in date[choine]:
                 print("\t",i2)
             choine2 = input("你要选择哪个市>>>:")
             if choine2 in date[choine]:
-                while not False:
+                while not exit_flag:
                     for i3 in date[choine][choine2]:
                         print("\t\t",i3)
                     choine3 = input("你选择哪家公司>>>:")
                     if choine3 in date[choine][choine2]:
                         for i4 in date[choine][choine2][choine3]:
                             print("\t\t\t",i4)
-                        choine4 = input("按 q 退出")
+                        choine4 = input("按 q 返回")
                         if choine4 == "q":
                             pass
-                        elif choine4 == "q":
+                        elif choine4 == "b":
                             exit_flag = True
                     if choine3 == "q":
                         break
+                    elif choine3 == "b":
+                        exit_flag = True
             if choine2 == "q":
                 break
+            elif choine2 == "b":
+                exit_flag = True
+
+
+
 
 
 
