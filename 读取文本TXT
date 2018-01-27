@@ -1,0 +1,15 @@
+import os                       #从标准库导入“OS”
+os.getcwd()
+'/Users/Administrator/PycharmProjects/LIBMO/windy'     #当前的工作目录
+os.chdir('/Users/Administrator/PycharmProjects/HeadFirstPython/chapter3')    #切换为包含数据文件的文件夹
+os.getcwd()
+'/Users/Administrator/PycharmProjects/HeadFirstPython/chapter3'  #确认现在在正确的目录下
+data = open('sketch.txt')       #打开一个命名文件，将文件赋至一个名为“data”的文件对象
+print(data.readline(),end='')
+                                #Man: Is this the right room gor an argument?
+print(data.readline(),end='')   #使用“readline()”方法从文件获取一个数据行，然后使用“print()”BIF在屏幕上显示这个数据行
+                                #Other Man: I've told you once
+data.seek(0)                    #使用“seek()”方法返回文件的初始位置，当然，对python的文件也可以使用“tell()”
+for each_line in data:
+    print(each_line,end='')     #标准的迭代
+data.close()                    #文件处理完后的关闭
