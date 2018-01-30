@@ -13,3 +13,20 @@ data.seek(0)                    #使用“seek()”方法返回文件的初始�
 for each_line in data:
     print(each_line,end='')     #标准的迭代
 data.close()                    #文件处理完后的关闭
+
+
+man = {}
+other = {}
+try:
+    data = open('sketch.txt')
+    for each_line in data:
+        except IOError:
+        try:
+            (role,line_spoken) = each_line.split(':',1)
+            line_spoken = line_spoken.strip()
+            if role == "Man":
+                man.append(line_spoken)
+            elif role == "Other Man":
+                other.append(line_spoken)
+            data.close()
+            print('The datafile is missing!')
