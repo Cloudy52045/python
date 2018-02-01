@@ -1,0 +1,49 @@
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*- 
+#集合天生去重
+
+list_1 = [1,2,3,5,7,9,8,7,6,5]
+list_1 = set(list_1)      #转化成集合
+list_2 = set([2,20,30,100,7,6,5])   #集合
+print(list_1,list_2)
+#交集
+print(list_1.intersection(list_2))
+#并集
+print(list_1.union(list_2))
+#差集  in list_1 but not in list_2
+print(list_1.difference(list_2))
+print(list_2.difference(list_1))
+#子集  判断
+print(list_1.issubset(list_2))
+print(list_2.issubset(list_1))
+list_3 = set([1,2,3])
+print(list_3.issubset(list_1))
+#对称差集
+print(list_1.symmetric_difference(list_2))
+
+print("------------------------")
+list_4 = set([5,6,8])
+#判断是否有交集
+print(list_3.isdisjoint(list_4))
+
+print("集合关系符号")
+#交集
+print(list_1 & list_2)
+#union
+print(list_1 | list_2)
+#difference
+print(list_1 - list_2)
+#对称差集
+print(list_1 ^ list_2)
+
+print("集合的增删改查")
+list_1.add(999)   #添加一项
+print(list_1)
+list_1.update([777,666,888])   #添加多项
+print(list_1)
+list_1.remove(777)    #删除一个
+print(list_1)
+print(list_1.pop())   #删除并返回删除的值
+print(list_1)
+print(list_1.discard(888))  #删除提示
+print(list_1)
