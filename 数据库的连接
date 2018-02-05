@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*- 
+
+import pymysql
+
+# 打开数据库连接
+connection = pymysql.connect("", "", "", "")
+
+# 使用 cursor() 方法创建一个游标对象 cursor
+cursor = connection.cursor()
+
+# 使用 execute()  方法执行 SQL 查询
+cursor.execute("select")
+
+# 使用 fetchone() 方法获取单条数据.
+# data = cursor.fetchone()
+# print(data)   
+# 查询数据库多条数据
+result = cursor.fetchall()
+for data2 in result:
+    print(data2)               
+# print("Database version : %s " % data)
+
+# 关闭数据库连接
+connection.close()
