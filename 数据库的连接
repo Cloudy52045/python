@@ -3,6 +3,7 @@
 # fetchone() 用于查询单条数据。
 # fetchall() 用于查询多条数据。
 # close() 最后不要忘记了关闭数据连接。
+# connection.rollback() 发生错误时回滚
 
 import pymysql
 
@@ -23,6 +24,7 @@ result = cursor.fetchall()
 for data2 in result:
     print(data2)               
 # print("Database version : %s " % data)
-
+# 发生错误时回滚
+    connection.rollback()
 # 关闭数据库连接
 connection.close()
