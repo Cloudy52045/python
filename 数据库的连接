@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*- 
+# fetchone() 用于查询单条数据。
+# fetchall() 用于查询多条数据。
+# close() 最后不要忘记了关闭数据连接。
 
 import pymysql
 
