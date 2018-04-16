@@ -1,3 +1,7 @@
+/**
+ * Created by Tivie on 06-01-2015.
+ */
+// Private properties
 age_of_oldboy = 56
 for i in range(3):
     guess_age = int(input("guess age:") )
@@ -51,3 +55,5 @@ while count <3:
             count =0
 #else:
 #    print("you have tried too many times..fuck off")
+
+
