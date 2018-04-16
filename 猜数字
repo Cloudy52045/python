@@ -1,7 +1,5 @@
-/**
- * Created by Tivie on 06-01-2015.
- */
-// Private properties
+python
+public viod add(){int a；}
 age_of_oldboy = 56
 for i in range(3):
     guess_age = int(input("guess age:") )
