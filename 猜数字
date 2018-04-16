@@ -1,5 +1,7 @@
 Java
-public viod add(){int a；}
+public viod add(){
+int a；
+}
 age_of_oldboy = 56
 for i in range(3):
     guess_age = int(input("guess age:") )
