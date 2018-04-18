@@ -1,4 +1,4 @@
-
+···python
 def print_lol(the_list):
     for each_iem in the_list:
         if isinstance(each_iem,list):     #定义一个函数
@@ -8,3 +8,4 @@ def print_lol(the_list):
 
 movies = ["The Holy Grail",1975,"Terry Jones & Terry Gillliam",91,["Graham Chapman",["Michael Palin","John Cleese","Terry Gilliam","Eric Idle","Terry Jones"]]]
 print_lol(movies)    #调用函数
+···
